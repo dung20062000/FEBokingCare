@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
-import { getAllUsers, createNewUserService } from "../../services/userService";
+import {emitter} from "../../utils/emitter"
+import { getAllUsers, createNewUserService, deleteUserService } from "../../services/userService";
 import "./UserManage.scss";
 import ModalUser from "./ModalUser";
 class UserManage extends Component {
@@ -47,12 +48,27 @@ class UserManage extends Component {
                 this.setState({
                     isOpenModalUser: false,
                 });
+                emitter.emit('EVENT_CREATE_MODAL_USER_DATA', {'id': "your id"})
             }
             
         }catch(err){
             console.log(err);
         }
     }
+    handleDeleteUser = async (user) => {
+        console.log('delete user', user)
+        try{
+            let response = await deleteUserService(user.id)
+            if(response && response.errCode === 0){
+                await this.getAllUserReact();
+            }else{
+                alert(response.errMessage);
+            }
+            console.log(response)
+        }catch(err){
+            console.log(err);
+        }
+    };
 
     render() {
         let arrUsers = this.state.arrUsers;
@@ -97,7 +113,10 @@ class UserManage extends Component {
                                                 <button className="btn-edit">
                                                     <i class="fas fa-pencil-alt"></i>
                                                 </button>
-                                                <button className="btn-delete">
+                                                <button
+                                                    className="btn-delete"
+                                                    onClick={() =>{this.handleDeleteUser(item)}}
+                                                >
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </td>
