@@ -1,0 +1,33 @@
+.modal-user-container {
+    display: flex;
+    flex-wrap: wrap;
+    .modal-content {
+        .modal-header {
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 30px;
+                color: white;
+            }
+        }
+    }
+
+    .modal-user-body {
+        display: flex;
+        flex-direction: column;
+        width: 47%;
+        margin: 15px 10px;
+
+        &.mx-width-input {
+            width: 100%;
+        }
+
+        input {
+            border-radius: 3px;
+            height: 30px;
+            border: 1px solid grey;
+            outline: none;
+            padding: 0 10px;
+        }
+    }
+}
