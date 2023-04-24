@@ -20,6 +20,7 @@ import System from "../routes/System";
 
 import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
+import HomePage from "./HomePage/HomePage.js";
 
 class App extends Component {
     handlePersistorState = () => {
@@ -62,6 +63,10 @@ class App extends Component {
                                 <Route
                                     path={path.SYSTEM}
                                     component={userIsAuthenticated(System)}
+                                />
+                                <Route
+                                    path={path.HOMEPAGE}
+                                    component={HomePage}
                                 />
                             </Switch>
                         </span>

@@ -1,0 +1,167 @@
+.home-header-container {
+    background: rgba(255, 255, 255, 1);
+    height: 70px;
+    z-index: 2;
+    width: 100%;
+    padding: 0 40px;
+
+    .home-header-content {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        .left-content {
+            width: 20%;
+            display: flex;
+            align-items: center;
+
+            .icon-bar {
+                font-size: 25px;
+                color: #969495;
+                float: right;
+                cursor: pointer;
+            }
+            .header-logo{
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+                transform: scale(0.5, 0.5);
+                margin-left: -60px;
+            }
+        }
+
+        .center-content {
+            width: 55%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .child-content {
+                .subs-title {
+                    font-size: 12px;
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        .right-content {
+            width: 25%;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+            gap: 20px;
+            color: #49BCE2;
+            i{
+                font-size: 15px;
+                margin-right: 5px;
+            }
+            span{
+                font-weight: 600;
+            }
+            .btn-language{
+                padding: 2px 5px;
+            }
+        }
+    }
+}
+
+.home-header-banner {
+    background: url("../../../assets/images/background.jpg");
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    .content-up {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+        height: 80%;
+
+
+        .title1 {
+            text-align: center;
+            color: #fff;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 1px #333;
+            margin-top: 115px;
+            margin-bottom: 5px;
+        }
+
+        .title2 {
+            text-align: center;
+            color: #fff;
+            font-size: 32px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 1px #333;
+            font-weight: 600;
+        }
+
+        .search {
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: fit-content;
+            padding: 10px;
+            border-radius: 25px;
+            background: #f7d800;
+            i {
+                margin: 0 10px;
+            }
+            input {
+                height: 30px;
+                width: 360px;
+                background: transparent;
+                border: none;
+                outline: none;
+            }
+        }
+    }
+    .content-down {
+        height: 20%;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+        padding-top: 30px;
+        padding-bottom: 20px;
+        
+        .options {
+            text-align: center;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .option-child{
+                max-width: 150px;
+                cursor: pointer;
+
+
+                .icon-child{
+                    box-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+                    width: 50px;
+                    height: 50px;
+                    font-size: 25px;
+                    padding: 10px;
+                    color: #49BCE2;
+                    margin: 0 auto;
+                    background: #fff;
+                    border-radius: 50%;
+                }
+                .text-child{
+                    text-align: center;
+                    padding: 5px 5px;
+                    color: #333;
+                    font-weight: bold;
+                    min-width: 150px;
+                    font-size: 16px;    
+                    &:hover{
+                        color: #49BCE2;
+                    }
+                }
+            }
+        }
+    }
+}
