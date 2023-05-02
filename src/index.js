@@ -10,6 +10,7 @@ import IntlProviderWrapper from "./hoc/IntlProviderWrapper";
 
 import { Provider } from 'react-redux';
 import reduxStore, { persistor } from './redux';
+// persistor giúp lưu chữ 1 biến của redux  giống như biến của localstorage
 
 const renderApp = () => {
     ReactDOM.render(

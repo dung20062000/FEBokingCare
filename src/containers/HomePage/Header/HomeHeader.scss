@@ -35,6 +35,7 @@
             justify-content: space-between;
             align-items: center;
             .child-content {
+                cursor: pointer;
                 .subs-title {
                     font-size: 12px;
                     font-weight: lighter;
@@ -47,17 +48,59 @@
             display: flex;
             align-items: center;
             justify-content: right;
-            gap: 20px;
-            color: #49BCE2;
-            i{
-                font-size: 15px;
-                margin-right: 5px;
-            }
-            span{
-                font-weight: 600;
+            gap: 40px;
+            .support{
+                cursor: pointer;
+                color: #49BCE2;
+                i{
+                    font-size: 15px;
+                    margin-right: 5px;
+                }
+                span{
+                    font-weight: 600;
+                }
             }
             .btn-language{
-                padding: 2px 5px;
+                display: flex;
+                gap: 20px;
+                border-left: 1px solid #ccc;
+                cursor: pointer;
+                .language-vi{
+                    text-align: center;
+                    line-height: 30px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    font-weight: 600;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                    &.active{
+                        background-image: url("../../../assets/images/logo/coVN.jpg");
+                        background-size: 30px 30px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        color: transparent;
+                    }
+                }
+                .language-en{
+                    text-align: center;
+                    line-height: 30px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    font-weight: 600;
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                    &.active{
+                        background-image: url("../../../assets/images/logo/co-anh.jpg");
+                        background-size: 30px 30px;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        color: transparent;
+                    }
+                }
             }
         }
     }

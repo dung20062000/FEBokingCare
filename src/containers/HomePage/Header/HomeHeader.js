@@ -3,9 +3,24 @@ import { connect } from "react-redux";
 import "./HomeHeader.scss";
 import logo from "../../../assets/images/logo/logo_bookingcare.svg"
 import { FormattedMessage } from 'react-intl';
+import { LANGUAGES } from "../../../../src/utils/"
+import { changeLanguageApp } from "../../../store/actions";
 
 class HomeHeader extends Component {
+
+    changeLanguage = (language) => { 
+        this.props.changeLanguageAppRedux(language)
+        //fire redux event
+        
+    }
+
+
+
+
+
     render() {
+        let language = this.props.language;
+        console.log('check language: ',language)
         return (
             <React.Fragment>
             <div className="home-header-container">
@@ -42,10 +57,11 @@ class HomeHeader extends Component {
                             <span><FormattedMessage id="home-header.support"/></span>
                         </div>
 
-                        <select id="flag" name="language" class="btn btn-language" >
-                                <option value="VN">VN</option>
-                                <option value="EN"> EN</option>
-                        </select>
+                        <div className="btn-language" >
+                            <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}><span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VI</span></div>
+                            <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
+                        </div>
+
                         
                     </div>
                 </div>
@@ -70,31 +86,31 @@ class HomeHeader extends Component {
                             <div className="text-child" ><FormattedMessage id="banner.remote-examination"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-book"></i></div>
+                            <div className="icon-child" ><i className="fas fa-book"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.general-examination"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-hand-holding-heart"></i></div>
+                            <div className="icon-child" ><i className="fas fa-hand-holding-heart"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.medical-tests"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-procedures"></i></div>
+                            <div className="icon-child" ><i className="fas fa-procedures"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.mental-health"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-meh"></i></div>
+                            <div className="icon-child" ><i className="fas fa-meh"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.dental-examination"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-heartbeat"></i></div>
+                            <div className="icon-child" ><i className="fas fa-heartbeat"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.succulent-pack"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-user-shield"></i></div>
+                            <div className="icon-child" ><i className="fas fa-user-shield"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.medical-products"/></div>
                         </div>
                         <div className="option-child" >
-                            <div className="icon-child" ><i class="fas fa-stopwatch"></i></div>
+                            <div className="icon-child" ><i className="fas fa-stopwatch"></i></div>
                             <div className="text-child" ><FormattedMessage id="banner.health-test"/></div>
                         </div>
                     </div>
@@ -110,11 +126,15 @@ class HomeHeader extends Component {
 const mapStateToProps = (state) => {
     return {
         isLoggedIn: state.user.isLoggedIn,
+        language: state.app.language
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
-    return {};
+    return {
+        //fire acction của redux (có tên là changeLanguageApp)
+        changeLanguageAppRedux: (language) => dispatch(changeLanguageApp(language))
+    };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
