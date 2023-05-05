@@ -20,7 +20,6 @@ class HomeHeader extends Component {
 
     render() {
         let language = this.props.language;
-        console.log('check language: ',language)
         return (
             <React.Fragment>
             <div className="home-header-container">
@@ -29,7 +28,6 @@ class HomeHeader extends Component {
                     <div className="left-content">
                         <i className="fas fa-bars icon-bar"></i>
                         <img className="header-logo" src={logo} ></img>
-                        {/* <div className="header-logo" ></div> */}
                     </div>
 
                     <div className="center-content">

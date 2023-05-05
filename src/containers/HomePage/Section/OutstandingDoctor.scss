@@ -1,0 +1,44 @@
+.section-OutstandingDoctor {
+    background: #fff;
+
+    .section-body {
+        .section-doctor {
+            text-align: center;
+            padding: 10px 5px;
+
+            position: relative;
+            vertical-align: top !important;
+            white-space: normal !important;
+            background: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            .section-doctor-border{
+                border: 1px solid #eee;
+                padding: 20px;
+            }
+
+            .img-doctor {
+                background-color: #fff;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                margin: auto;
+                background: url("../../../assets/images/doctor/bsckii-tran-minh-khuyen.jpg");
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .section-item-text-doctor {
+
+                color: #555;
+                font-size: 12px;
+                .doctor-name{
+                    padding-top: 10px;
+                    font-size: 14px;
+                }
+                span{
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}

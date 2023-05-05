@@ -1,0 +1,109 @@
+.home-footer {
+    background-color: var(--background-gray);
+
+    .footer-container {
+        margin: auto;
+        max-width: 1140px;
+        padding-right: 15px;
+        padding-left: 15px;
+        .footer-content {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 20px;
+
+            .footer-content-left {
+                width: 50%;
+                height: 300px;
+                .footer-logo {
+                    max-width: 200px;
+                    height: 100%;
+                    cursor: pointer;
+                }
+                .address-left {
+                    text-align: left;
+                    h4 {
+                        font-weight: bold;
+                        margin: 10px 0;
+                        font-size: 15px;
+                    }
+                    p {
+                        margin: 5px 0;
+                        font-size: 14px;
+                        i {
+                            padding-right: 5px;
+                        }
+                        .footer-logo-license {
+                            height: 40px;
+                            margin-top: 10px;
+                            max-width: 49%;
+                        }
+                    }
+                }
+            }
+
+            .footer-content-center {
+                width: 25%;
+                float: left;
+                position: relative;
+                ul {
+                    margin-left: -20px;
+                    list-style: none;
+                    overflow-x: hidden;
+                    li {
+                        padding: 5px 0;
+                        a {
+                            color: var(--color-a);
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            .footer-content-right {
+                width: 25%;
+                text-align: left;
+                h4 {
+                    font-weight: bold;
+                    margin: 10px 0;
+                    font-size: 15px;
+                }
+                p {
+                    margin: 5px 0;
+                    font-size: 14px;
+                    i {
+                        padding-right: 5px;
+                    }
+                    .footer-logo-license {
+                        height: 40px;
+                        margin-top: 10px;
+                        max-width: 49%;
+                    }
+                }
+            }
+        }
+
+        .footer-app {
+            border-top: 1px solid #ccc;
+            p {
+                padding: 15px 0;
+                span{
+                    a{
+                        color: var(--background-blue);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .footer-end {
+        background-color: var(--background-blue);
+        height: 50px;
+        color: var(--background-white);
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        a {
+            color: var(--background-white);
+        }
+    }
+}
