@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { FormattedMessage } from "react-intl";
 import { connect } from "react-redux";
 import { emitter } from "../../utils/emitter";
-import lodash from "lodash"; // sử lí mảng và obj dễ dàng hopwn js thuần 
+import lodash from "lodash"; // sử lí mảng và obj dễ dàng hopwn js thuần
 
 import "./ModalEditUser.scss";
 import _ from "lodash";
@@ -21,16 +21,17 @@ class ModalEditUser extends Component {
     }
 
     componentDidMount() {
-        let user = this.props.currentUser // === let {currentUser} = this.props
-        if(user && !_.isEmpty(user)){ //isEmpty là hàm của lodash 
+        let user = this.props.currentUser; // === let {currentUser} = this.props
+        if (user && !_.isEmpty(user)) {
+            //isEmpty là hàm của lodash
             this.setState({
                 id: user.id,
                 email: user.email,
-                password: 'harcode',
+                password: "harcode",
                 firstName: user.firstName,
                 lastName: user.lastName,
-                address: user.address
-            })
+                address: user.address,
+            });
         }
     }
 
@@ -74,7 +75,6 @@ class ModalEditUser extends Component {
         }
     };
 
-
     render() {
         return (
             <Modal
@@ -96,7 +96,7 @@ class ModalEditUser extends Component {
                 <ModalBody>
                     <div className="modal-user-container">
                         <div className="modal-user-body">
-                            <label for="email">Email:</label>
+                            <label htmlFor="email">Email:</label>
                             <input
                                 type="email"
                                 id="email"
@@ -110,7 +110,7 @@ class ModalEditUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body">
-                            <label for="password">Password:</label>
+                            <label htmlFor="password">Password:</label>
                             <input
                                 type="password"
                                 id="password"
@@ -124,7 +124,7 @@ class ModalEditUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body">
-                            <label for="firstName">First Name:</label>
+                            <label htmlFor="firstName">First Name:</label>
                             <input
                                 type="text"
                                 id="firstName"
@@ -137,7 +137,7 @@ class ModalEditUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body">
-                            <label for="lastName">Last Name:</label>
+                            <label htmlFor="lastName">Last Name:</label>
                             <input
                                 type="text"
                                 id="lastName"
@@ -150,7 +150,7 @@ class ModalEditUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body mx-width-input">
-                            <label for="address">Address:</label>
+                            <label htmlFor="address">Address:</label>
                             <input
                                 type="text"
                                 id="address"

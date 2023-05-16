@@ -93,7 +93,7 @@ class ModalUser extends Component {
                 <ModalBody>
                     <div className="modal-user-container">
                         <div className="modal-user-body">
-                            <label for="email">Email:</label>
+                            <label htmlFor="email">Email:</label>
                             <input
                                 type="email"
                                 id="email"
@@ -106,7 +106,7 @@ class ModalUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body">
-                            <label for="password">Password:</label>
+                            <label htmlFor="password">Password:</label>
                             <input
                                 type="password"
                                 id="password"
@@ -119,7 +119,7 @@ class ModalUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body">
-                            <label for="firstName">First Name:</label>
+                            <label htmlFor="firstName">First Name:</label>
                             <input
                                 type="text"
                                 id="firstName"
@@ -132,7 +132,7 @@ class ModalUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body">
-                            <label for="lastName">Last Name:</label>
+                            <label htmlFor="lastName">Last Name:</label>
                             <input
                                 type="text"
                                 id="lastName"
@@ -145,7 +145,7 @@ class ModalUser extends Component {
                             />
                         </div>
                         <div className="modal-user-body mx-width-input">
-                            <label for="address">Address:</label>
+                            <label htmlFor="address">Address:</label>
                             <input
                                 type="text"
                                 id="address"
