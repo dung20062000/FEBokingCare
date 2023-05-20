@@ -56,7 +56,8 @@
         "position" : "Chức Danh",
         "role" : "Vai Trò",
         "image" : "Ảnh",
-        "save" : "Lưu"
+        "save" : "Lưu",
+        "editUser" : "Lưu thay đổi "
 
     }
 }
