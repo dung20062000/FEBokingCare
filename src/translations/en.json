@@ -57,7 +57,9 @@
         "role" : "Role",
         "image" : "Image",
         "save" : "Save",
-        "editUser" : "Save changes"
+        "editUser" : "Save changes",
+        "upLoadImg" : "Upload image "
+
 
     }
 }

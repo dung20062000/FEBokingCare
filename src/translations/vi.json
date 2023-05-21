@@ -57,7 +57,8 @@
         "role" : "Vai Trò",
         "image" : "Ảnh",
         "save" : "Lưu",
-        "editUser" : "Lưu thay đổi "
+        "editUser" : "Lưu thay đổi ",
+        "upLoadImg" : "Tải ảnh"
 
     }
 }
