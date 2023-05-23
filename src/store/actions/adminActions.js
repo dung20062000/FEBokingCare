@@ -1,5 +1,11 @@
 import actionTypes from "./actionTypes";
-import { getAllCodeService, createNewUserService, getAllUsers, deleteUserService, editUserService } from "../../services/userService";
+import { getAllCodeService, 
+    createNewUserService, 
+    getAllUsers, 
+    deleteUserService, 
+    editUserService,
+    getTopDoctorService,
+ } from "../../services/userService";
 import { ToastContainer, toast } from 'react-toastify';
 
 //gender
@@ -192,6 +198,7 @@ export const fetchAllUserStart = () => {
     return async (dispatch, getState) => {
         try {
             let res = await getAllUsers("ALL");
+
             if (res && res.errCode === 0) {
                 dispatch(fetchAllUserSuccess(res.users.reverse())); //reverse() để đảo ngược mảng render ra table
             } else {
@@ -213,3 +220,42 @@ export const fetchAllUserSuccess = (data) => ({
 export const fetchAllUserFailded = () => ({
     type: 'FETCH_ALL_USER_FAILDED'
 });
+
+
+// //top doctor
+export const fetchTopDoctor = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getTopDoctorService("10");
+            console.log('check res get top doctor', res)
+
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_TOP_DOCTOR_SUCCESS,
+                    dataDoctors: res.data
+                }); //reverse() để đảo ngược mảng render ra table
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_TOP_DOCTOR_SUCCESS,
+
+                });
+            }
+        } catch (e) {
+            console.log('FETCH_TOP_DOCTOR_FAILDED: ',e)
+            dispatch({
+                type: actionTypes.FETCH_TOP_DOCTOR_FAILDED,
+            });
+        }
+    };
+};
+// export const fetchTopDoctorSuccess = (data) => ({
+//     // type: 'FETCH_TOP_DOCTOR_SUCCESS',
+//     // users: data //chuyền đi 1 bên có key là users và giá trị là data chuyền vào (data là lấy từ api từ hàm dispatch)
+// });
+
+// export const fetchTopDoctorFailded = () => ({
+//     // type: 'FETCH_TOP_DOCTOR_FAILDED'
+// });
+
+// let res1 = await getTopDoctorService(3);
+// console.log('check res1 get top doctor', res1)

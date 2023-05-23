@@ -60,5 +60,9 @@
         "editUser" : "Lưu thay đổi ",
         "upLoadImg" : "Tải ảnh"
 
+    },
+    "homepage" : {
+        "outstanding-doctor" : "Bác Sĩ Nổi Bật Tuần Qua",
+        "more-info" : "Xem Thêm"
     }
 }
