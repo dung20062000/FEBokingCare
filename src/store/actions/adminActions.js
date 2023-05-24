@@ -5,6 +5,8 @@ import { getAllCodeService,
     deleteUserService, 
     editUserService,
     getTopDoctorService,
+    getAllDoctorService,
+    saveDetailDoctor
  } from "../../services/userService";
 import { ToastContainer, toast } from 'react-toastify';
 
@@ -232,7 +234,7 @@ export const fetchTopDoctor = () => {
             if (res && res.errCode === 0) {
                 dispatch({
                     type: actionTypes.FETCH_TOP_DOCTOR_SUCCESS,
-                    dataDoctors: res.data
+                    dataDoctors: res.data    //reverse()
                 }); //reverse() để đảo ngược mảng render ra table
             } else {
                 dispatch({
@@ -259,3 +261,59 @@ export const fetchTopDoctor = () => {
 
 // let res1 = await getTopDoctorService(3);
 // console.log('check res1 get top doctor', res1)
+
+
+// lấy tất cả thông tin bác sĩ 
+export const fetchAllDoctors = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllDoctorService();
+            // console.log('check res get top doctor', res)
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_DOCTOR_SUCCESS,
+                    dataDrs: res.data    //reverse()
+                }); //reverse() để đảo ngược mảng render ra table
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_DOCTOR_SUCCESS,
+
+                });
+            }
+        } catch (e) {
+            console.log('FETCH_ALL_DOCTOR_FAILDED: ',e)
+            dispatch({
+                type: actionTypes.FETCH_ALL_DOCTOR_FAILDED,
+            });
+        }
+    };
+};
+
+// lưu detail của bác sĩ lên db
+export const saveDetailDoctors = (data) => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await saveDetailDoctor(data);
+            // console.log('check res get top doctor', res)
+            if (res && res.errCode === 0) {
+                toast.success('save details doctor success')
+                dispatch({
+                    type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
+                    dataDrs: res.data    //reverse()
+                }); //reverse() để đảo ngược mảng render ra table
+            } else {
+                toast.error('save details doctor failded')
+                dispatch({
+                    type: actionTypes.SAVE_DETAIL_DOCTOR_FAILDED,
+
+                });
+            }
+        } catch (e) {
+            toast.error('save details doctor failded')
+            console.log('SAVE_DETAIL_DOCTOR_FAILDED: ',e)
+            dispatch({
+                type: actionTypes.SAVE_DETAIL_DOCTOR_FAILDED,
+            });
+        }
+    };
+};
