@@ -5,6 +5,7 @@ import logo from "../../../assets/images/logo/logo_bookingcare.svg"
 import { FormattedMessage } from 'react-intl';
 import { LANGUAGES } from "../../../../src/utils/"
 import { changeLanguageApp } from "../../../store/actions";
+import { withRouter } from "react-router";
 
 class HomeHeader extends Component {
 
@@ -13,10 +14,11 @@ class HomeHeader extends Component {
         //fire redux event
         
     }
-
-
-
-
+    returnToHome = () => {
+        if(this.props.history){
+            this.props.history.push(`/home`)
+        }
+    }
 
     render() {
         let language = this.props.language;
@@ -28,7 +30,7 @@ class HomeHeader extends Component {
 
                     <div className="left-content">
                         <i className="fas fa-bars icon-bar"></i>
-                        <img className="header-logo" src={logo} ></img>
+                        <img className="header-logo" src={logo} onClick={() => this.returnToHome()} ></img>
                     </div>
 
                     <div className="center-content">
@@ -139,4 +141,4 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader));
