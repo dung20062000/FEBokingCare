@@ -19,6 +19,7 @@ import System from "../routes/System";
 // import { CustomToastCloseButton } from "../components/CustomToast";
 import ConfirmModal from "../components/ConfirmModal";
 import HomePage from "./HomePage/HomePage.js";
+import DetailDoctor from "./Patient/Doctor/DetailDoctor";
 
 import CustomScrollbars from "../components/CustomScrollbars";
 
@@ -50,8 +51,7 @@ class App extends Component {
 
                         <div className="content-container">
                             <CustomScrollbars
-                                style={{ height: "100vh", width: "100%" }}
-                            >
+                                style={{ height: "100vh", width: "100%" }}>
                                 <Switch>
                                     <Route
                                         path={path.HOME}
@@ -72,10 +72,14 @@ class App extends Component {
                                         path={path.HOMEPAGE}
                                         component={HomePage}
                                     />
+                                    <Route
+                                        path={path.DETAIL_DOCTOR}
+                                        component={DetailDoctor}
+                                    />
                                 </Switch>
                             </CustomScrollbars>
                         </div>
-{/* 
+                        {/* 
                         <ToastContainer
                             className="toast-container"
                             toastClassName="toast-item"
