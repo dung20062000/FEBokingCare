@@ -30,7 +30,7 @@
             position: absolute;
             padding: 0;
             .menu {
-                width: 205px;
+                width: 100%;
                 padding: 0 15px;
                 height: 35px;
                 line-height: 35px;
@@ -38,6 +38,10 @@
                 &.active {
                     a{
                         color: #fff;
+                        &:hover{
+                            background-color: darken($bg-menu-color, 5);
+                            color: #000;
+                        }
                     }
                     background-color: #2A8EF2;
                 }
@@ -61,6 +65,7 @@
                         white-space: nowrap;
                         &:hover {
                             background-color: darken($bg-menu-color, 5);
+                            
                         }
                         .sub-menu-link {
                             text-decoration: none;

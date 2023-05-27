@@ -11,6 +11,7 @@ import {
 } from "../hoc/authentication";
 
 import { path } from "../utils";
+import Doctor from "../routes/Doctor";
 
 import Home from "../routes/Home";
 import Login from "./Auth/Login";
@@ -69,6 +70,10 @@ class App extends Component {
                                         component={userIsAuthenticated(System)}
                                     />
                                     <Route
+                                        path={'/doctor'}
+                                        component={userIsAuthenticated(Doctor)}
+                                    />
+                                    <Route
                                         path={path.HOMEPAGE}
                                         component={HomePage}
                                     />
@@ -77,6 +82,7 @@ class App extends Component {
                                         component={DetailDoctor}
                                     />
                                 </Switch>
+                                
                             </CustomScrollbars>
                         </div>
                         {/* 

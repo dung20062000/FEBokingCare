@@ -41,6 +41,9 @@
             "handbook": "Cẩm Nang",
             "manage-handbook": "Quản lý bài đăng"
 
+        },
+        "doctor": {
+            "manager-schedule": "Quản lý Kế hoạch khám bệnh"
         }
     },
 
