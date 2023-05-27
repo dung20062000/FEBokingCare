@@ -317,3 +317,28 @@ export const saveDetailDoctors = (data) => {
         }
     };
 };
+
+export const fetchAllScheduleTime = () => {
+    return async (dispatch, getState) => {
+        try {
+            let res = await getAllCodeService('TIME');
+            // console.log('check res get top doctor', res)
+            if (res && res.errCode === 0) {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_CODE_TIME_SUCCESS,
+                    dataTime: res.data    //reverse()
+                }); //reverse() để đảo ngược mảng render ra table
+            } else {
+                dispatch({
+                    type: actionTypes.FETCH_ALL_CODE_TIME_FAILDED,
+
+                });
+            }
+        } catch (e) {
+            console.log('FETCH_ALL_CODE_TIME_FAILDED: ',e)
+            dispatch({
+                type: actionTypes.FETCH_ALL_CODE_TIME_FAILDED,
+            });
+        }
+    };
+};
