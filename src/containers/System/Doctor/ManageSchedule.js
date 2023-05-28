@@ -5,6 +5,7 @@ import { CRUD_ACTION, LANGUAGES } from "../../../utils";
 import * as actions from "../../../store/actions";
 import { toast } from 'react-toastify';
 import {dateFormat} from "../../../utils/constant"
+import {saveBulkScheduleDoctorService} from "../../../services/userService"
 
 
 import Select from "react-select";
@@ -89,7 +90,7 @@ class ManageSchedule extends Component {
             })
         }
     }
-    handleSaveSchedule = () => {
+    handleSaveSchedule = async () => {
         let result = [];
         let {rangeTime, selectedDoctor, currentDate} = this.state;
         if(!currentDate){
@@ -99,7 +100,9 @@ class ManageSchedule extends Component {
             toast.error('Please check invalid choose doctor')
         }
 
-        let formatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER)
+        // let formatDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER)
+        // let formatDate = moment(currentDate).unix()
+        let formatDate = new Date(currentDate).getTime()
         if(rangeTime && rangeTime.length > 0){
             let selectedTime = rangeTime.filter(item => item.isSelected === true)
             if( selectedTime && selectedTime.length > 0){
@@ -107,7 +110,7 @@ class ManageSchedule extends Component {
                     let obj = {}
                     obj.doctorId = selectedDoctor.value
                     obj.date = formatDate
-                    obj.time = schedule.keyMap
+                    obj.timeType = schedule.keyMap
                     result.push(obj)
                 })
             }else{
@@ -116,7 +119,13 @@ class ManageSchedule extends Component {
             }
             
         }
-        console.log('chewck result time', result)
+        let  res = await saveBulkScheduleDoctorService({
+            arrSchedule : result,
+            doctorId: selectedDoctor.value,
+            formatDate: formatDate
+        })
+        console.log('check result time', result)
+        console.log('check saveBulkScheduleDoctorService', res)
 
     }
 
