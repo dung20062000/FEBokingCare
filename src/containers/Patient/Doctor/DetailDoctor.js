@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import HomeHeader from "../../HomePage/Header/HomeHeader";
 import HomeFooter from "../../HomePage/Footer/HomeFooter";
 import {getDetailInfoDoctorService} from "../../../services/userService"
+import DoctorSchedule from "./DoctorSchedule"
 import './DetailDoctor.scss'
 import { LANGUAGES } from "../../../utils";
 
@@ -66,8 +67,18 @@ class DetailDoctor extends Component {
                             </div>
                         </div>
                     </div>
-
-                    <div className="schedule-doctor"></div>
+                    
+                    <div className="schedule-doctor-container">
+                        <div className="schedule-doctor">
+                            <div className="content-left">
+                                <DoctorSchedule
+                                    doctorIdFromParent={detailDoctor && detailDoctor.id ? detailDoctor.id : -1}
+                                />
+                            </div>
+                            <div className="content-right"></div>
+                        </div>
+                    </div>
+                    
                     <div className="detail-info-doctor-container">
                         <div className="detail-info-doctor">
                             {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML &&

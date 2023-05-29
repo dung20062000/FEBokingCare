@@ -62,10 +62,31 @@
             }
         }
     }
+    .schedule-doctor-container{
+        border-bottom: 1px solid #ccc;
+        height: 200px;
+        .schedule-doctor{
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 1140px;
+            margin: auto;
+            display: flex;
+            border: 1px solid #e71616;
+            .content-left{
+                width: 50%;
+            }
+            .content-right{
+                width: 50%;
+                height: 50px;
 
-    .schedule-doctor{
 
+                
+            }
+        }
     }
+
+
     .comment-doctor{
 
     }
