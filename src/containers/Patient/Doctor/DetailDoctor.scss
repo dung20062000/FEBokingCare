@@ -64,7 +64,7 @@
     }
     .schedule-doctor-container{
         border-bottom: 1px solid #ccc;
-        height: 200px;
+        padding-bottom: 20px;
         .schedule-doctor{
             padding-top: 15px;
             padding-left: 15px;
@@ -72,13 +72,13 @@
             max-width: 1140px;
             margin: auto;
             display: flex;
-            border: 1px solid #e71616;
+
             .content-left{
                 width: 50%;
+                border-right: 1px solid #ddd;
             }
             .content-right{
                 width: 50%;
-                height: 50px;
 
 
                 

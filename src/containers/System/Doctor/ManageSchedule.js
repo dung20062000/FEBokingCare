@@ -119,6 +119,7 @@ class ManageSchedule extends Component {
             }
             
         }
+
         let  res = await saveBulkScheduleDoctorService({
             arrSchedule : result,
             doctorId: selectedDoctor.value,
