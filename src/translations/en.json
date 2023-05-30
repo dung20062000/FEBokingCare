@@ -75,5 +75,15 @@
         "choose-doctor": "Choose Doctor",
         "save-info": "Save Information"
         
+    },
+    "admin" : {
+        "manage-doctor" : {
+            "title" : "Create More Doctor Information",
+            "choose-doctor" : "Choose  Doctor",
+            "info-intro" : "Introduction Information",
+            "save-info": "Save Info",
+            "create-info": "Create Info"
+        }
+
     }
 }

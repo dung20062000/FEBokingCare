@@ -73,5 +73,15 @@
         "choose-date": "Chọn Ngày",
         "choose-doctor": "Chọn Bác Sĩ",
         "save-info": "Lưu Thông Tin"
+    },
+    "admin" : {
+        "manage-doctor" : {
+            "title" : "Tạo Thêm Thông Tin Bác Sĩ",
+            "choose-doctor" : "Chọn Bác Sĩ",
+            "info-intro" : "Thông Tin giới thiệu",
+            "save-info": "Lưu Thông Tin",
+            "create-info": "Tạo Thông Tin"
+        }
+
     }
 }

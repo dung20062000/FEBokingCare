@@ -342,3 +342,38 @@ export const fetchAllScheduleTime = () => {
         }
     };
 };
+
+//gender
+export const getRequireDoctorInfo = () => {
+    return async (dispatch, getState) => {
+        try {
+            dispatch({ type: actionTypes.FETCH_REQUIRE_DOCTOR_INFO_START });
+            let resPrice = await getAllCodeService("PRICE");
+            let resPayment = await getAllCodeService("PAYMENT");
+            let resProvince = await getAllCodeService("PROVINCE");
+            if (resPrice && resPrice.errCode === 0
+                && resPayment && resPayment.errCode === 0
+                && resProvince && resProvince.errCode === 0) 
+                {
+                    let data = {
+                        resPrice: resPrice.data,
+                        resPayment: resPayment.data,
+                        resProvince: resProvince.data,
+                    }
+                dispatch(fetchRequireDoctorInfoSuccess(data));
+            } else {
+                dispatch(fetchRequireDoctorInfoFailed());
+            }
+        } catch (e) {
+            dispatch(fetchRequireDoctorInfoFailed());
+            console.log("fetchRequireDoctorInfoFailed err:", e);
+        }
+    };
+};
+export const fetchRequireDoctorInfoSuccess = (allRequireData) => ({
+    type: actionTypes.FETCH_REQUIRE_DOCTOR_INFO_SUCCESS,
+    data: allRequireData,
+});
+export const fetchRequireDoctorInfoFailed = () => ({
+    type: actionTypes.FETCH_REQUIRE_DOCTOR_INFO_FAILDED,
+});
