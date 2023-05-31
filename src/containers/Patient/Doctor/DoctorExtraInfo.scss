@@ -1,0 +1,119 @@
+.doctor-extra-info-container {
+    float: left;
+    padding-left: 20px;
+    border-top: none;
+    margin-top: 0px;
+    .content-up {
+        .add-title {
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+        }
+        .name-clinic {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .address {
+            font-size: 13px;
+            padding: 3px 0;
+        }
+    }
+    .content-down {
+        .price-title {
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #666;
+            .more-info {
+                cursor: pointer;
+                color: #45c3d2;
+                margin: 10px 0;
+                -webkit-animation: my 700ms infinite;
+                -moz-animation: my 700ms infinite; 
+                -o-animation: my 700ms infinite; 
+                animation: my 700ms infinite;
+            }
+            @-webkit-keyframes my {
+                0% { color: #F8CD0A; } 
+                50% { color: #1435f3;  } 
+                100% { color: #F8CD0A;  } 
+            }
+            @-moz-keyframes my { 
+                0% { color: #F8CD0A;  } 
+                50% { color: #1435f3;  }
+                100% { color: #F8CD0A;  } 
+            }
+            @-o-keyframes my { 
+                0% { color: #F8CD0A; } 
+                50% { color: #1435f3; } 
+                100% { color: #F8CD0A;  } 
+            }
+            @keyframes my { 
+                0% { color: #F8CD0A;  } 
+                50% { color: #1435f3;  }
+                100% { color: #F8CD0A;  } 
+            } 
+        }
+        .price-title-second {
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .price-info {
+            border-spacing: 0;
+            border-collapse: collapse;
+            background-color: transparent;
+            width: 100%;
+            max-width: 100%;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08);
+            background: #eee;
+
+            .price-detail-info {
+                font-size: 15px;
+
+                border-top: 1px solid #ddd;
+                padding: 3px;
+                vertical-align: top;
+                .left {
+                }
+                .right {
+                    float: right;
+                    padding: 3px;
+                }
+            }
+            p {
+                width: 90%;
+                padding: 3px;
+                display: block;
+                color: #666;
+                font-size: 12px;
+            }
+            .pay-method {
+                border-top: 1px solid #ddd;
+                padding: 8px 3px 3px 3px;
+                vertical-align: middle;
+                background: #f8f8f8;
+                font-size: 14px;
+                padding: 8px 3px 3px;
+                line-height: 21px;
+            }
+        }
+        .close-info {
+            cursor: pointer;
+            color: #45c3d2;
+            margin: 10px 0;
+        }
+    }
+}

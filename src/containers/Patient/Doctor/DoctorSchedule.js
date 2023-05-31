@@ -4,6 +4,7 @@ import './DoctorSchedule.scss'
 import moment from 'moment';
 import localization from 'moment/locale/vi';
 import { LANGUAGES } from "../../../utils";
+import { FormattedMessage } from "react-intl";
 import {getScheduleDoctorByDateService} from "../../../services/userService"
 class DoctorSchedule extends Component {
     constructor(props) {
@@ -82,7 +83,7 @@ class DoctorSchedule extends Component {
                 </div>
                 <div className="all-available-time">
                         <div className="text-calender">
-                            <span> <i className="fas fa-calendar-alt"></i>Lịch kham</span>
+                            <span> <i className="fas fa-calendar-alt"></i><FormattedMessage id="detail-doctors.schedule.calendar"/></span>
                         </div>
                         <div className="time-container">
                             {allAvailableTime && allAvailableTime.length > 0 ? 
@@ -94,7 +95,7 @@ class DoctorSchedule extends Component {
                                         <button key={index} className="time-item">{timeDisplay}</button>
                                     )
                             })
-                            : <div className="time-warning" >Bạn Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác</div>
+                            : <div className="time-warning" ><FormattedMessage id="detail-doctors.schedule.info-warning"/></div>
                         
                         }
 

@@ -91,5 +91,11 @@
             "note":"Note"
         }
 
+    },
+    "detail-doctors": {
+        "schedule":{
+            "info-warning": "You do not have an appointment during this time, please choose another time",
+            "calendar":"Calendar"
+        }
     }
 }

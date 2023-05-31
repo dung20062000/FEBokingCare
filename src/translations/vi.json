@@ -90,5 +90,11 @@
 
         }
 
+    },
+    "detail-doctors": {
+        "schedule":{
+            "info-warning": "Bạn Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác",
+            "calendar":"Lịch Khám"
+        }
     }
 }
