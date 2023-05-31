@@ -80,7 +80,14 @@
             "choose-doctor" : "Chọn Bác Sĩ",
             "info-intro" : "Thông Tin giới thiệu",
             "save-info": "Lưu Thông Tin",
-            "create-info": "Tạo Thông Tin"
+            "create-info": "Tạo Thông Tin",
+            "price":"Giá Khám",
+            "payment":"Phương thức thanh toán",
+            "province":"Tỉnh thành",
+            "name-clinic":"Tên Phòng khám",
+            "add-clinic":"Địa chỉ phòng khám",
+            "note":"Ghi chú"
+
         }
 
     }

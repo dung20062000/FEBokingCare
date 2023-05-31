@@ -82,7 +82,13 @@
             "choose-doctor" : "Choose  Doctor",
             "info-intro" : "Introduction Information",
             "save-info": "Save Info",
-            "create-info": "Create Info"
+            "create-info": "Create Info",
+            "price":"Price Check",
+            "payment":"Payment methods",
+            "province":"Provinces",
+            "name-clinic":"Clinic Name",
+            "add-clinic":"Clinic address",
+            "note":"Note"
         }
 
     }
