@@ -39,7 +39,6 @@ class OutstandingDoctor extends Component {
         let {language} = this.props
         let arrDoctors = this.state.arrDoctors
         // arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors)
-        console.log('check arrDoctors', arrDoctors);
         return (
             <div className="section-content section-OutstandingDoctor">
                 <div className="section-container">

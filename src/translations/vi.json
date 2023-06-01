@@ -95,6 +95,14 @@
         "schedule":{
             "info-warning": "Bạn Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác",
             "calendar":"Lịch Khám"
+        },
+        "extra-info-doctor": {
+            "add-text": "Địa chỉ khám",
+            "price-text": "Giá Khám",
+            "detail-info": "Xem chi tiết",
+            "close-info": "Ẩn bảng giá",
+            "pay-method": "Người bệnh có thể thanh toán chi phí bằng hình thức: "
+
         }
     }
 }

@@ -96,6 +96,14 @@
         "schedule":{
             "info-warning": "You do not have an appointment during this time, please choose another time",
             "calendar":"Calendar"
+        },
+        "extra-info-doctor": {
+            "add-text": "Clinic Address",
+            "price-text": "Price",
+            "detail-info": "See details",
+            "close-info": "Hide price list",
+            "pay-method": "The patient can pay the cost in the form of: "
+
         }
     }
 }

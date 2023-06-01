@@ -18,7 +18,6 @@ const mdParser = new MarkdownIt(/* Markdown-it options */);
 
 // Finish!
 function handleEditorChange({ html, text }) {
-  console.log('handleEditorChange', html, text);
 }
 
 class TableManageUser extends Component {
@@ -42,7 +41,6 @@ class TableManageUser extends Component {
         this.props.deleteUserRedux(user.id);
     }
     handleEditUser(user) {
-        // console.log('Edit user', user);
         this.props.handEditUserFromParent(user)
     }
     render() {

@@ -108,7 +108,6 @@ class ManageDoctor extends Component {
             let dataSelectPrice = this.buildDataInputSelect(resPrice,"PRICE")
             let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT")
             let dataSelectProvince = this.buildDataInputSelect(resProvince, "PROVINCE")
-            console.log('check duw lieuej res ', dataSelectPrice, dataSelectPayment, dataSelectProvince)
 
             this.setState({
                 listPrice: dataSelectPrice,
@@ -219,7 +218,6 @@ class ManageDoctor extends Component {
         this.setState({
             ...stateCopy
         })
-        console.log('check new select onchanged: ', selectedDoctor, stateName)
     }
 
     handleOnchangeText = (event, id) => {
@@ -233,7 +231,6 @@ class ManageDoctor extends Component {
     render() {
         let {hasOldData} = this.state
 
-        console.log('check state ', this.state)
 
         return (
             <div>

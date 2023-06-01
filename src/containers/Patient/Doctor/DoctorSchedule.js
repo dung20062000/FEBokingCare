@@ -49,7 +49,6 @@ class DoctorSchedule extends Component {
     }   
 
     handleOnChangeSelect = async (event) => {
-        console.log('check props = ', this.props.detailDoctor)
 
         if(this.props.doctorIdFromParent && this.props.doctorIdFromParent !== -1){
             let doctorId = this.props.doctorIdFromParent;
@@ -63,7 +62,6 @@ class DoctorSchedule extends Component {
                 })
             }
 
-            console.log('check res = ', res)
 
         }
     }

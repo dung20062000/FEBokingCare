@@ -28,6 +28,10 @@
             text-transform: uppercase;
             font-size: 14px;
             color: #666;
+            .price-number{
+                margin: 0 10px 0 5px;
+            }
+            
             .more-info {
                 cursor: pointer;
                 color: #45c3d2;
@@ -94,7 +98,7 @@
                 }
             }
             p {
-                width: 90%;
+                width: 80%;
                 padding: 3px;
                 display: block;
                 color: #666;

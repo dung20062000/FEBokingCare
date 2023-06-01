@@ -26,7 +26,6 @@ class DetailDoctor extends Component {
             }else{
                 
             }
-            console.log('check res', res)
 
         }
     }
