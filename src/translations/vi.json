@@ -94,7 +94,10 @@
     "detail-doctors": {
         "schedule":{
             "info-warning": "Bạn Không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác",
-            "calendar":"Lịch Khám"
+            "calendar":"Lịch Khám",
+            "choose":"Chọn",
+            "book-free":"và đặt (miễn phí)"
+
         },
         "extra-info-doctor": {
             "add-text": "Địa chỉ khám",

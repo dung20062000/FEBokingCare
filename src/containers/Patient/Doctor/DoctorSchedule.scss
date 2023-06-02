@@ -6,7 +6,7 @@
         font-weight: bold;
         padding: 15px;
         margin: 0;
-        select{
+        select {
             background: transparent;
             border: none;
             color: #337ab7;
@@ -19,7 +19,6 @@
     .all-available-time {
         padding-left: 15px;
         .text-calender {
-
             i {
                 margin-right: 10px;
             }
@@ -33,28 +32,36 @@
             }
         }
         .time-container {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            .time-item {
-                min-width: 22%;
-                border: none;
-                outline: none;
-                background-color: #fff04b;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                padding: 10px 15px;
-                &:hover{
-                    color: #fff;
-                    background-color: #337ab7;
+
+            .time-container-btn {
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+
+                .time-item {
+                    min-width: 22%;
+                    border: none;
+                    outline: none;
+                    background-color: #fff04b;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    padding: 10px 15px;
+                    &:hover {
+                        color: #fff;
+                        background-color: #337ab7;
+                    }
+                }
+                .time-warning {
+                    color: #ee2929;
+                    font-size: 15px;
+                    font-weight: 500;
                 }
             }
-            .time-warning{
-                color: #ee2929;
-                font-size: 15px;
-                font-weight: 500;
-                
-
+            .book-free{
+                margin-top: 10px;
+                i{
+                    padding: 0 5px;
+                }
             }
         }
     }

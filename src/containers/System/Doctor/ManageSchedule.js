@@ -8,6 +8,7 @@ import {dateFormat} from "../../../utils/constant"
 import {saveBulkScheduleDoctorService} from "../../../services/userService"
 
 
+
 import Select from "react-select";
 import moment from "moment";
 import DatePicker from "../../../components/Input/DatePicker";
@@ -125,14 +126,20 @@ class ManageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatDate: formatDate
         })
-        console.log('check result time', result)
-        console.log('check saveBulkScheduleDoctorService', res)
+        if(res &&  res.errCode === 0 ){
+            toast.success('Save successfully')
+        }else{
+            toast.error('ERR. Please check saveBulkScheduleDoctorService')
+            console.log('check saveBulkScheduleDoctorService', res)
+
+        }
 
     }
 
     render() {
         let {rangeTime} = this.state;
         let {language} = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate()-1))
         console.log("check state", rangeTime);
         return (
             <div className="manage-schedule-container">
@@ -155,7 +162,7 @@ class ManageSchedule extends Component {
                                 className="form-control"
                                 onChange={this.handleOnChangeDatePicker}
                                 value={this.state.currentDate}
-                                minDate={new Date()}
+                                minDate={yesterday}
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
