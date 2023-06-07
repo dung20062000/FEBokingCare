@@ -66,7 +66,8 @@
     },
     "homepage" : {
         "outstanding-doctor" : "Bác Sĩ Nổi Bật Tuần Qua",
-        "more-info" : "Xem Thêm"
+        "more-info" : "Xem Thêm",
+        "specialty": "Chuyên khoa phổ biến"
     },
     "manage-schedule" : {
         "title" : "Quản lí Kế hoạch Khám bệnh của bác sĩ",

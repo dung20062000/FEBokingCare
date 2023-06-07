@@ -77,6 +77,10 @@ const createNewSpecialty = (data) => {
     return axios.post("/api/create-new-specialty", data);
    
 }
+
+const getAllSpecialtyService = (doctorId) => {
+    return axios.get(`/api/get-specialty`);
+}
 export { handleLoginApi, 
     getAllUsers, 
     createNewUserService, 
@@ -93,5 +97,6 @@ export { handleLoginApi,
     getProfileDoctorByIdService,
     postPatientBookingAppointment,
     postPVerifyBookingAppointment,
-    createNewSpecialty
+    createNewSpecialty,
+    getAllSpecialtyService
 };

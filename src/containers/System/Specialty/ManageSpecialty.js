@@ -60,6 +60,12 @@ class ManageSpecialty extends Component {
         let result = await createNewSpecialty(this.state)
         if(result && result.errCode === 0 ){
             toast.success('created new Specialty successfully')
+            this.setState({
+                name:'',
+                imageBase64: '',
+                descriptionHTML: '',
+                descriptionMarkdown: '',
+            })
         }else{
             toast.error('error creating new Specialty')
             console.log('check state: ' , result)
