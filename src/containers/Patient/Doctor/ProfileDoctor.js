@@ -69,13 +69,13 @@ class ProfileDoctor extends Component {
     render() {
         let {dataProFile, } = this.state
         let {language, isShowDescriptionDoctor, dataTime} = this.props
-        console.log('check props', this.props)
+        // console.log('check props', this.props)
         let nameVi = '', nameEn = '';
         if(dataProFile && dataProFile.positionData){
             nameVi = `${dataProFile.positionData.valueVi}, ${dataProFile.lastName} ${dataProFile.firstName}`
             nameEn = `${dataProFile.positionData.valueEn}, ${dataProFile.firstName} ${dataProFile.lastName}`
         }
-        console.log('check state', this.state)
+        // console.log('check state', this.state)
         return (
             <div className="profile-doctor">
                 <div className="intro-doctor">

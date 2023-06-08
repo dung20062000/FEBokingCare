@@ -7,6 +7,9 @@ import HomeFooter from "../../HomePage/Footer/HomeFooter";
 import DoctorSchedule from "../Doctor/DoctorSchedule"
 import DoctorExtraInfo from "../Doctor/DoctorExtraInfo";
 import ProfileDoctor from "../Doctor/ProfileDoctor";
+import {getDetailSpecialtyByIdService, getAllCodeService} from "../../../services/userService"
+import _ from "lodash" // sử lí mảng và obj dễ dàng hopwn js thuần
+import { LANGUAGES } from "../../../utils";
 
 
 
@@ -14,28 +17,94 @@ class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrDoctorId: [58, 59, 57]
+            arrDoctorId: [],
+            dataDetailSpecialty: {},
+            listProvinces: [],
         };
     }
-    async componentDidMount() {}
+    async componentDidMount () {
+        if(this.props.match && this.props.match.params && this.props.match.params.id){
+            let id = this.props.match.params.id;
+            let res = await getDetailSpecialtyByIdService({
+                id: id,
+                location: 'ALL'
+            })
+
+            let resProvince = await getAllCodeService('PROVINCE')
+            if(res && res.errCode === 0 && resProvince && resProvince.errCode === 0){
+                let data = res.data;
+                let arrDoctorId = []
+                if(data && !_.isEmpty(res.data)){
+                    let arr = data.doctorSpecialty
+                    if(arr && arr.length > 0){
+                        arr.map(item => {
+                            arrDoctorId.push(item.doctorId)
+                        })
+                    }
+                }
+                this.setState({
+                    dataDetailSpecialty: res.data,
+                    arrDoctorId : arrDoctorId,
+                    listProvinces:  resProvince.data
+                })
+            }else{
+                
+            }
+
+        }
+    }
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
         }
     }
 
+    handleChangSelect = (event) => {
+        console.log('check onchange', event.target.value)
+    }
 
     render() {
-        let { arrDoctorId } = this.state;
+        let { arrDoctorId, dataDetailSpecialty, listProvinces } = this.state;
+        // console.log('check state aaaaaa', this.state)
+        let {language} = this.props
         return (
             <div className="detail-specialty-content">
                 <HomeHeader/>
+                <div className="specialty-description">
+                    <div className="specialty-description-background">
+                        <div className="specialty-description-body">
+                            {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty)
+                                &&  <div dangerouslySetInnerHTML={{__html: dataDetailSpecialty.descriptionHTML}}>
+                                            
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
                 <div className="detail-specialty-container">
-                    <div className="specialty-description">
-
+                    <div className="search-doctor">
+                        <select
+                            onChange={(event) => this.handleChangSelect(event) }
+                            className="btn-search-doctor"
+                        >
+                            {
+                                listProvinces && listProvinces.length > 0 && listProvinces.map(
+                                    (item, index) => {
+                                        return(
+                                            <option 
+                                                key={index}
+                                                value={item.keyMap}
+                                                
+                                            >
+                                                { language === LANGUAGES.VI ? item.valueVi : item.valueEn}
+                                            </option>
+                                        )
+                                    }
+                                )
+                            }
+                        </select>
                     </div>
 
-                    
                     {
                         arrDoctorId && arrDoctorId.length > 0 &&
                         arrDoctorId.map((item, index) => {

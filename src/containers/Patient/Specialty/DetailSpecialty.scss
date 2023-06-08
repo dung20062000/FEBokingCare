@@ -1,9 +1,43 @@
 .detail-specialty-content {
     background-color: #eeeeee;
 
+    .specialty-description{
+        margin-bottom: 20px;
+        background-image: url("../../../assets/images/background.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .specialty-description-background{
+            background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 1));
+            height: 100%;
+            width: 100%;
+            .specialty-description-body{
+                max-width: 1140px;
+                margin: auto;
+            }
+        }
+    }
     .detail-specialty-container {
+
         max-width: 1140px;
         margin: auto;
+
+        .search-doctor{
+            padding-bottom: 10px;
+            .btn-search-doctor{
+                display: block;
+                padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #212529;
+                background-color: #fff;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+
+            }
+
+        }
         .specialty-description {
             border: 1px solid red;
             height: 200px;

@@ -140,7 +140,7 @@ class ManageSchedule extends Component {
         let {rangeTime} = this.state;
         let {language} = this.props;
         let yesterday = new Date(new Date().setDate(new Date().getDate()-1))
-        console.log("check state", rangeTime);
+        // console.log("check state", rangeTime);
         return (
             <div className="manage-schedule-container">
                 <div className="m-s-title">
