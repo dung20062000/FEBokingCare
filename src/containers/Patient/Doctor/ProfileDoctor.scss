@@ -3,17 +3,18 @@
 
     .intro-doctor {
         display: flex;
+        width: 100%;
         .content-left {
             background-color: #fff;
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            margin: 10px 20px;
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
         }
         .content-right {
+            width: 70%;
             display: flex;
             flex-direction: column;
             padding-left: 10px;
@@ -28,6 +29,7 @@
         }
     }
     .price{
+        margin-top: 15px;
         display: flex;
         gap: 10px;
         font-size: 14px;
