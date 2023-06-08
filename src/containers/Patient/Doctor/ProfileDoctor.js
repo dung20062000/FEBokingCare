@@ -7,6 +7,8 @@ import { LANGUAGES } from "../../../utils";
 import { NumericFormat } from 'react-number-format';
 import _ from "lodash";
 import moment from "moment";
+import {link} from 'react-router-dom'
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 
 class ProfileDoctor extends Component {
@@ -65,10 +67,9 @@ class ProfileDoctor extends Component {
 
     }
 
-
     render() {
         let {dataProFile, } = this.state
-        let {language, isShowDescriptionDoctor, dataTime} = this.props
+        let {language, isShowDescriptionDoctor, dataTime, isShowLinkDetail, isShowPrice, doctorId} = this.props
         // console.log('check props', this.props)
         let nameVi = '', nameEn = '';
         if(dataProFile && dataProFile.positionData){
@@ -106,30 +107,37 @@ class ProfileDoctor extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="price">
-                    <span> <FormattedMessage id="detail-doctors.booking-modal.price-booking"/>: </span>
-                    { dataProFile &&  dataProFile.Doctor_Info && language === LANGUAGES.VI ?
-                        <NumericFormat 
-                            value={dataProFile.Doctor_Info.priceTypeData.valueVi } 
-                            displayType={"text"} 
-                            thousandSeparator={true} 
-                            suffix={'VND'}
-                        />
-                        : ''
-                        
-                    }
+                {isShowLinkDetail === true  && <div className="view-detail-doctor">
+                    {/* <a href={`/detail-doctor/${doctorId}`}>Xem Them</a> */}
+                    <Link to={`/detail-doctor/${doctorId}`} className="btn-view-detail-doctor">Xem Them</Link>
+                </div>}
+                {isShowPrice ===true &&
+                    <div className="price">
+                        <span> <FormattedMessage id="detail-doctors.booking-modal.price-booking"/>: </span>
+                        { dataProFile &&  dataProFile.Doctor_Info && language === LANGUAGES.VI ?
+                            <NumericFormat 
+                                value={dataProFile.Doctor_Info.priceTypeData.valueVi } 
+                                displayType={"text"} 
+                                thousandSeparator={true} 
+                                suffix={'VND'}
+                            />
+                            : ''
+                            
+                        }
 
-                    { dataProFile &&  dataProFile.Doctor_Info && language === LANGUAGES.EN ?
-                         
-                        <NumericFormat 
-                            value={dataProFile.Doctor_Info.priceTypeData.valueEn} 
-                            displayType={"text"} 
-                            thousandSeparator={true} 
-                            suffix={'$'}
-                        />
-                        : ''
-                    }
-                </div>
+                        { dataProFile &&  dataProFile.Doctor_Info && language === LANGUAGES.EN ?
+                            
+                            <NumericFormat 
+                                value={dataProFile.Doctor_Info.priceTypeData.valueEn} 
+                                displayType={"text"} 
+                                thousandSeparator={true} 
+                                suffix={'$'}
+                            />
+                            : ''
+                        }
+                    </div>
+
+                }
             </div>
         );
     }
