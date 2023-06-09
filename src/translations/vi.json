@@ -92,6 +92,18 @@
             "specialty": "Chọn chuyên khoa",
             "clinic": "Chọn phòng khám"
 
+        },
+        "manage-patients": {
+            "title" : "Quản Lý Lịch hẹn khám bệnh",
+            "date" : "Chọn ngày",
+            "number" : "STT",
+            "time" : "Thời gian",
+            "name" : "Họ và Tên",
+            "address" : "Địa chỉ",
+            "gender" : "Giới tính",
+            "action" : "Thao tác",
+            "confirm" : "Xác Nhận",
+            "remedy" : "Gửi Hóa Đơn"
         }
 
     },

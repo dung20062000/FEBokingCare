@@ -94,9 +94,22 @@
             "specialty": "Choose Specialty",
             "clinic": "Choose Clinic"
             
+        },
+        "manage-patients": {
+            "title" : "Manage Medical Appointment Schedule",
+            "date" : "Choose date",
+            "number" : "ST",
+            "time" : "Appointment time",
+            "name" : "Full Name",
+            "address" : "Address",
+            "gender" : "Gender",
+            "action" : "Action",
+            "confirm" : "Confirm",
+            "remedy" : "Send Remedy"
         }
 
     },
+    
     "detail-doctors": {
         "schedule":{
             "info-warning": "You do not have an appointment during this time, please choose another time",
