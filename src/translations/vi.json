@@ -43,7 +43,8 @@
 
         },
         "doctor": {
-            "manager-schedule": "Quản lý Kế hoạch khám bệnh"
+            "manager-schedule": "Quản lý Kế hoạch khám bệnh",
+            "manager-patient": "Quản lý Lịch hẹn khám bệnh"
         }
     },
 

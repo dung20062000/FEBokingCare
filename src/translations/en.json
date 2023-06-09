@@ -43,7 +43,8 @@
 
         },
         "doctor": {
-            "manager-schedule": "Manage Doctor's Schedule"
+            "manager-schedule": "Manage Doctor's Schedule",
+            "manager-patient": "Manage Medical Appointments"
         }
 
     },
