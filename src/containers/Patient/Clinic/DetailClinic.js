@@ -10,6 +10,8 @@ import ProfileDoctor from "../Doctor/ProfileDoctor";
 import {getDetailClinicByIdService, getAllCodeService} from "../../../services/userService"
 import _ from "lodash" // sử lí mảng và obj dễ dàng hopwn js thuần
 import { LANGUAGES } from "../../../utils";
+import LikeAndShare from "../SocialPlugin/LikeAndShare";
+import Comment from "../SocialPlugin/Comment";
 
 
 
@@ -61,6 +63,7 @@ class DetailClinic extends Component {
 
     render() {
         let { arrDoctorId, dataDetailClinic } = this.state;
+        let currentURL = +process.env.REACT_APP_IS_LOCALHOST === 1 ? "https://developers.facebook.com": window.location.href
         // console.log('check state aaaaaa', this.state)
         let {language} = this.props
         return (
@@ -72,7 +75,13 @@ class DetailClinic extends Component {
                             {dataDetailClinic && !_.isEmpty(dataDetailClinic)
                                 &&
                                 <>
-                                    <div className="clinic-body-name">{dataDetailClinic.name}</div>
+                                    <div className="clinic-body-name">{dataDetailClinic.name}
+                                    </div>
+                                    <div className="like-share-clinic">
+                                        <LikeAndShare
+                                            dataHref={currentURL}
+                                        />
+                                    </div>
                                     <div className="clinic-description-detail-body" dangerouslySetInnerHTML={{__html: dataDetailClinic.descriptionHTML}}>
                                                 
                                     </div>
@@ -115,6 +124,12 @@ class DetailClinic extends Component {
                             )
                         })
                     }
+                    <div className="comment-doctor">
+                        <Comment
+                            dataHref={currentURL}
+                            width= {"100%"}
+                        />
+                    </div>
                 
                 </div>
                 <HomeFooter/>
