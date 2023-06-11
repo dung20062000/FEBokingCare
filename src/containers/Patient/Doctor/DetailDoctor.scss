@@ -39,6 +39,9 @@
                     padding-top: 10px;
                     color: #555;
                     font-size: 13px;
+                    .like-share-plugin{
+                        margin: 10px 0;
+                    }
                 }
             }
         }
@@ -88,6 +91,10 @@
 
 
     .comment-doctor{
-
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1140px;
+        margin: auto;
     }
 }
