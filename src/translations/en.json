@@ -10,7 +10,23 @@
         "medical-checkup-package": "Checkup Package",
         "health-check": "General health check",
         "support": "Support",
-        "welcome": "Welcome"
+        "welcome": "Welcome",
+        "sub-menu": {
+            "page": "Home Page",
+            "hand_book": "Handbook",
+            "connect_for": "Contact for cooperation",
+            "health": "Corporate health",
+            "package": "Enterprise digital transformation package",
+            "Recruitment": "Recruitment",
+            "patient": "For patients",
+            "doctor": "For doctors",
+            "role": "The role of BookingCare",
+            "connect": "Contact",
+            "questions": "Frequently asked questions",
+            "use": "terms of use",
+            "support": "Complaint handling support process",
+            "Regulations": "Operational Regulations"
+        }
     },
 
     "banner": {

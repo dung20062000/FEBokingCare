@@ -23,6 +23,10 @@ class OutstandingDoctor extends Component {
             this.setState({
                 arrDoctors: this.props.topDoctorsRedux
             })
+            console.log(
+                "check chuyen khoa arrDoctors",
+                this.props.topDoctorsRedux
+            );
         }
     }
     componentDidMount() {
@@ -58,6 +62,7 @@ class OutstandingDoctor extends Component {
                             }
                             let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`
                             let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`
+                            
                             return(
                                 <div className="section-doctor" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                                 <div className="section-doctor-border">
@@ -66,7 +71,7 @@ class OutstandingDoctor extends Component {
                                     ></div>
                                     <div className="section-item-text-doctor">
                                         <div className="doctor-name">{language === LANGUAGES.VI ? nameVi : nameEn}</div>
-                                        <span>Khoa nào đó 1</span>
+                                        {/* <span>Khoa nào đó 1</span> */}
                                     </div>
                                 </div>
                             </div>

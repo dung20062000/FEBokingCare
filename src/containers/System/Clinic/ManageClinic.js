@@ -77,11 +77,11 @@ class ManageClinic extends Component {
 
         return (
             <div className="manage-specialty-container">
-                <div className="title">Quan li Phòng khám</div>
+                <div className="title">Quản lý Phòng khám</div>
 
                 <div className="add-new-specialty row mt-5 mb-4">
                     <div className="col-6 form-group mt-4">
-                        <label> Ten Phòng khám</label>
+                        <label> Tên Phòng khám</label>
                         <input 
                             className="form-control" 
                             type="text" 
@@ -91,14 +91,14 @@ class ManageClinic extends Component {
                         ></input>
                     </div>
                     <div className="col-6 form-group mt-4">
-                        <label> Anh phòng khám :</label>
+                        <label> Ảnh phòng khám :</label>
                         <br/><input className="form-control-file" type="file"
                             onChange={(event) => this.handleOnchangeImage(event)}
                             
                         ></input>
                     </div>
                     <div className="col-6 form-group mt-4">
-                        <label> Địa phòng khám :</label>
+                        <label> Địa chỉ phòng khám :</label>
                         <input 
                             className="form-control" 
                             type="text" 
@@ -120,7 +120,7 @@ class ManageClinic extends Component {
                     <button 
                         className="btn btn-primary mt-3"
                         onClick={() => this.handleSaveClinic()}
-                    >Save</button>
+                    >Lưu</button>
                 </div>
             </div>
         );

@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import "./About.scss";
 import { FormattedMessage } from "react-intl";
 import logoVTV from "../../../assets/images/logo/vtv1.png"
+import logoVTCgo from "../../../assets/images/logo/vnexpress.png"
+import logogo from "../../../assets/images/logo/cuc-cong-nghe-thong-tin-bo-y-te-2.png"
 // Import css files
 
 
@@ -35,13 +37,10 @@ class About extends Component {
                                 <a><img className="logo-vtv" src={logoVTV}/></a>
                             </li>
                             <li>
-                                <a><img className="logo-vtv" src={logoVTV}/></a>
+                                <a><img className="logo-vtv" src={logoVTCgo}/></a>
                             </li>
                             <li>
-                                <a><img className="logo-vtv" src={logoVTV}/></a>
-                            </li>
-                            <li>
-                                <a><img className="logo-vtv" src={logoVTV}/></a>
+                                <a><img className="logo-vtv" src={logogo}/></a>
                             </li>
                         </ul>
                         </div>

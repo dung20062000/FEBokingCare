@@ -8,7 +8,12 @@ import { changeLanguageApp } from "../../../store/actions";
 import { withRouter } from "react-router";
 
 class HomeHeader extends Component {
-
+     constructor(props) {
+        super(props);
+        this.state={
+            isShowBtnMenu: false,
+        }
+     }
     changeLanguage = (language) => { 
         this.props.changeLanguageAppRedux(language)
         //fire redux event
@@ -18,6 +23,16 @@ class HomeHeader extends Component {
         if(this.props.history){
             this.props.history.push(`/home`)
         }
+    }
+    goToLogin = () => {
+        if(this.props.history){
+            this.props.history.push(`/login`)
+        }
+    }
+    handleShowBtnMenu= ()=>{
+        this.setState({
+            isShowBtnMenu: !this.state.isShowBtnMenu
+        })
     }
 
     render() {
@@ -29,12 +44,12 @@ class HomeHeader extends Component {
                 <div className="home-header-content">
 
                     <div className="left-content">
-                        <i className="fas fa-bars icon-bar"></i>
+                        <i className="fas fa-bars icon-bar" onClick={() =>this.handleShowBtnMenu()}></i>
                         <img className="header-logo" src={logo} onClick={() => this.returnToHome()} ></img>
                     </div>
 
                     <div className="center-content">
-                        <div className="child-content" >
+                        <div className="child-content">
                             <div><b><FormattedMessage id="home-header.speciality"/></b></div>
                             <div className="subs-title"><FormattedMessage id="home-header.search-doctor"/></div>
                         </div>
@@ -63,10 +78,31 @@ class HomeHeader extends Component {
                             <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}><span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
                         </div>
 
+                        <div className="btn-login">
+                        <i className="fas fa-sign-in-alt icon-login" onClick={() => this.goToLogin()} ></i>
+                        </div>
+
                         
                     </div>
                 </div>
             </div>
+            {this.state.isShowBtnMenu === true &&
+            <div className="menu-btn-container">
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.page"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.hand_book"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.connect_for"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.health"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.package"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.Recruitment"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.patient"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.doctor"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.role"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.connect"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.questions"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.use"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.support"/></div>
+                <div className="menu-btn-item"><FormattedMessage id="home-header.sub-menu.Regulations"/></div>
+            </div>}
             {this.props.isShowBanner === true &&
             <div className="home-header-banner" >
                 <div className="content-up" >

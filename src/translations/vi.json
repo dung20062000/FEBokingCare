@@ -10,7 +10,23 @@
         "medical-checkup-package": "Gói Khám bệnh",
         "health-check": "Khám sức khỏe tổng quát",
         "support": "Hỗ trợ",
-        "welcome": "Xin chào"
+        "welcome": "Xin chào",
+        "sub-menu": {
+            "page": "Trang chủ",
+            "hand_book": "Cẩm nang",
+            "connect_for": "Liên hệ hợp tác",
+            "health": "Sức khỏe doanh nghiệp",
+            "package": "Gói chuyển đổi số doanh nghiệp ",
+            "Recruitment": "Tuyển dụng",
+            "patient": "Dành cho bệnh nhân",
+            "doctor": "Dành cho bác sĩ",
+            "role": "Vai trò của BookingCare ",
+            "connect": "Liên hệ",
+            "questions": "Câu hỏi thường gặp",
+            "use": "Điều khoản sử dụng",
+            "support": "Quy trình hỗ trợ giải quyết khiếu nại ",
+            "Regulations": "Quy chế hoạt động "
+        }
 
     },
 

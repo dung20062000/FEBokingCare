@@ -22,37 +22,37 @@ class HealthHandBook extends Component {
                     <div className="section-item">
                             <div className="section-item-container"> 
                                 <div className="bg-img"></div>
-                                <div className="section-item-text">Cơ Xương Khớp 1</div>
+                                <div className="section-item-text">Cẩm Nang 1</div>
                             </div>
                         </div>
                         <div className="section-item">
                             <div className="section-item-container"> 
                                 <div className="bg-img"></div>
-                                <div className="section-item-text">Cơ Xương Khớp 2</div>
+                                <div className="section-item-text">Cẩm Nang 2</div>
                             </div>
                         </div>
                         <div className="section-item">
                             <div className="section-item-container"> 
                                 <div className="bg-img"></div>
-                                <div className="section-item-text">Cơ Xương Khớp 3</div>
+                                <div className="section-item-text">Cẩm Nang 3</div>
                             </div>
                         </div>
                         <div className="section-item">
                             <div className="section-item-container"> 
                                 <div className="bg-img"></div>
-                                <div className="section-item-text">Cơ Xương Khớp 4</div>
+                                <div className="section-item-text">Cẩm Nang 4</div>
                             </div>
                         </div>
                         <div className="section-item">
                             <div className="section-item-container"> 
                                 <div className="bg-img"></div>
-                                <div className="section-item-text">Cơ Xương Khớp 5</div>
+                                <div className="section-item-text">Cẩm Nang 5</div>
                             </div>
                         </div>
                         <div className="section-item">
                             <div className="section-item-container"> 
                                 <div className="bg-img"></div>
-                                <div className="section-item-text">Cơ Xương Khớp 6</div>
+                                <div className="section-item-text">Cẩm Nang 6</div>
                             </div>
                         </div>
                     </Slider>

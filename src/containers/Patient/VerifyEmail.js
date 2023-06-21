@@ -63,8 +63,8 @@ class VerifyEmail extends Component {
                                     <div className="icon-container">
                                         <i class="checkmark-true">✓</i>
                                     </div>
-                                    <h1 className="title-true">Success</h1> 
-                                    <p className="sub-title-true">We received your request;<br/> we'll be in touch shortly!</p>
+                                    <h1 className="title-true">Thành Công</h1> 
+                                    <p className="sub-title-true">Chúng tôi đã nhận được yêu cầu của bạn<br/> Chúng tôi sẽ liên lạc ngay!</p>
                                 </div>
                             </div>
                         :
@@ -73,8 +73,8 @@ class VerifyEmail extends Component {
                                     <div className="icon-container">
                                     <i class="checkmark-false">X</i>
                                     </div>
-                                    <h1 className="title-false">Unsuccess</h1> 
-                                    <p className="sub-title-false">Your request has not been fulfilled;<br/>Please try again!</p>
+                                    <h1 className="title-false">Không Thành Công</h1> 
+                                    <p className="sub-title-false">Yêu cầu của bạn chưa được đáp ứng<br/>Vui lòng thử lại!</p>
                                 </div>
                             </div>
                                 
