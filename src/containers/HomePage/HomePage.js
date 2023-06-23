@@ -23,8 +23,53 @@ class HomePage extends Component {
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 1,
+            initialSlide: 0,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    dots: false,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 740,
+                  settings: {
+                    dots: false,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 640 ,
+                  settings: {
+                    dots: false,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    dots: false,
+                    infinite: false,
+                    speed: 500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                  }
+                }
+              ]
             // apterChange: this.handleAfterChange
         };
+        
+
         return (
             <div>
                 <HomeHeader isShowBanner = {true}/>

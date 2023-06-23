@@ -2,7 +2,6 @@
     background-image: linear-gradient(to left, #dac768, #2ebf91);
     height: 100vh;
     .login-container{
-        margin: auto;
         max-width: 400px;
         height: 500px;
         position: absolute;
@@ -71,8 +70,26 @@
         }
     }
 }
-// {
-//     
-
-//     }
-// }
+@media only screen and (min-width: 1024px){
+    .login-background{
+        .login-container{
+            margin: auto;
+        }
+    }
+}
+// /* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+    .login-background{
+        .login-container{
+            margin: auto;
+        }
+    }
+}
+// /* mobile: width < 740px  */
+@media only screen and (max-width: 740px){
+    .login-background{
+        .login-container{
+            margin: auto 10px;
+        }
+    }
+}
