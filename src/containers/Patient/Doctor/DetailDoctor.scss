@@ -1,0 +1,229 @@
+.doctor-detail-container {    
+    .intro-doctor-container{
+        border-bottom: 1px solid #ccc;
+        .intro-doctor {
+            display: flex;
+            max-width: 1140px;
+            margin: auto;
+            .content-left {  
+                background-color: #fff;
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                margin: 10px 20px;
+    
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+    
+            .content-right {
+                display: flex;
+                flex-direction: column;
+                padding-left: 15px;
+    
+                .up {
+                    font-size: 20px;
+                    font-weight: 600;
+                    padding-top: 15px;
+                }
+    
+                .down {
+                    padding-top: 10px;
+                    color: #555;
+                    font-size: 13px;
+                    margin-right: 10px;
+                    text-align: justify;
+                    .like-share-plugin{
+                        margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    .detail-info-doctor-container{
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ccc;
+
+        .detail-info-doctor{
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 1140px;
+            margin: auto;
+    
+            
+            img{
+                width: 100%;
+                padding-top: 10px;
+            }
+        }
+    }
+    .schedule-doctor-container{
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        .schedule-doctor{
+            padding-top: 15px;
+            padding-right: 15px;
+            max-width: 1140px;
+            margin: auto;
+            display: flex;
+
+            .content-left{
+                width: 50%;
+
+            }
+            .content-right{
+                width: 50%;
+            }
+        }
+    }
+
+
+    .comment-doctor{
+        padding-top: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 1140px;
+        margin: auto;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .doctor-detail-container {
+
+    
+        .intro-doctor-container{
+            .intro-doctor {        
+                .content-left {
+                    width: 20%;
+                    background-color: #fff;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: 10px 20px;
+        
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .content-right {
+                    width: 80%;       
+                }
+            }
+        }
+        
+        .schedule-doctor-container{
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            .schedule-doctor{
+                padding-top: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-width: 1140px;
+                margin: auto;
+                display: flex;
+    
+                .content-left{
+                    width: 50%;
+                    border-right: 1px solid #ddd;
+                }
+                .content-right{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+// /* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 740px) and (max-width: 1024px){
+    .doctor-detail-container {
+
+        .intro-doctor-container{
+    
+            .intro-doctor {        
+                .content-left {
+                    width: 20%;
+        
+                    background-color: #fff;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: 10px 20px;
+        
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+        
+                .content-right {
+                    width: 80%;       
+                }
+            }
+        }
+        
+        .detail-info-doctor-container{
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ccc;
+        }
+        .schedule-doctor-container{
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+            .schedule-doctor{
+                .content-left{
+                    width: 50%;
+                    border-right: 1px solid #ddd;
+                }
+                .content-right{
+                    width: 50%;
+                }
+            }
+        }
+    }
+}
+// /* mobile: width < 740px  */
+@media only screen and (max-width: 740px){
+    .doctor-detail-container {
+
+    
+        .intro-doctor-container{    
+            .intro-doctor {
+                flex-direction: column; 
+                align-items: center; 
+        
+                .content-left {
+                    width: 100%; 
+                    background-color: #fff;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    margin: 10px 20px;
+        
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+        
+                .content-right {
+                    width: 100%; 
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 15px;        
+                }
+            }
+        }
+        .schedule-doctor-container{
+            .schedule-doctor{
+                flex-direction: column; 
+
+    
+                .content-left{
+                    width: 100%;  
+                }
+                .content-right{
+                    width: 100%; 
+                }
+            }
+        }
+    }
+}

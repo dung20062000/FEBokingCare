@@ -1,0 +1,27 @@
+
+.icon-plus{
+    margin-right: 5px;
+}
+
+.thead-dark{
+    background-color: rgb(42, 142, 242);
+    color: white;
+}
+
+//btn edit
+.btn-edit, .btn-delete{
+    width: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: rgb(251, 180, 0);
+    font-size: 30px;
+    margin: 0 5px;
+    &:hover{
+        background: transparent !important;
+        color: #333;
+    }
+}
+.btn-delete{
+    color: rgb(218, 49, 49);
+}

@@ -1,0 +1,143 @@
+{
+
+    "home-header": {
+        "speciality" : "Specialty",
+        "search-doctor" : "Find a doctor by specialty",
+        "health-facility" : "Health facilities",
+        "Choose-hospital-clinic":"Choose hospital clinic",
+        "choose-doctor" :"Doctor",
+        "doctor": "Choose a good doctor",
+        "medical-checkup-package": "Checkup Package",
+        "health-check": "General health check",
+        "support": "Support",
+        "welcome": "Welcome"
+    },
+
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "speciality": "Specialist Examination",
+        "remote-examination": "Remote Examination",
+        "general-examination": "General Examination",
+        "medical-tests": "Medical Tests",
+        "mental-health": "Mental health",
+        "dental-examination": "Dental Examination",
+        "succulent-pack": "Succulent Pack",
+        "medical-products": "Medical Products",
+        "health-test": "Health Test"
+    },
+    
+    "menu": {
+        "admin": {
+            "manager-user": "Manager user",
+            "manager-doctor": "Manager doctor",
+            "manager-admin": "Manager admin",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD admin, doctor",
+            "clinic": "Clinic",
+            "manage-clinic": "Manager clinic",
+            "specialty": "Specialties",
+            "manage-specialty": "Manager specialty",
+            "handbook": "Handbook",
+            "manage-handbook": "Manager Handbook"
+
+        },
+        "doctor": {
+            "manager-schedule": "Manage Doctor's Schedule",
+            "manager-patient": "Manage Medical Appointments"
+        }
+
+    },
+    "manager-user": {
+        "add" : "Add new user",
+        "email" : "Email",
+        "password" : "Password",
+        "firstName" : "First Name",
+        "lastName" : "Last Name",
+        "phoneNumber" : "Phone Number",
+        "address" : "Address",
+        "gender" : "Gender",
+        "position" : "Position",
+        "role" : "Role",
+        "image" : "Image",
+        "save" : "Save",
+        "editUser" : "Save changes",
+        "upLoadImg" : "Upload image "
+
+
+    },
+    "homepage" : {
+        "outstanding-doctor" : "Last Week's Featured Doctor",
+        "more-info" : "More info",
+        "specialty": "Popular specialties"
+    },
+    "manage-schedule" : {
+        "title" : "Manage doctor's examination plan",
+        "choose-date": "Choose Date",
+        "choose-doctor": "Choose Doctor",
+        "save-info": "Save Information"
+        
+    },
+    "admin" : {
+        "manage-doctor" : {
+            "title" : "Create More Doctor Information",
+            "choose-doctor" : "Choose  Doctor",
+            "info-intro" : "Introduction Information",
+            "save-info": "Save Info",
+            "create-info": "Create Info",
+            "price":"Price Check",
+            "payment":"Payment methods",
+            "province":"Provinces",
+            "name-clinic":"Clinic Name",
+            "add-clinic":"Clinic address",
+            "note":"Note",
+            "specialty": "Choose Specialty",
+            "clinic": "Choose Clinic"
+            
+        },
+        "manage-patients": {
+            "title" : "Manage Medical Appointment Schedule",
+            "date" : "Choose date",
+            "number" : "ST",
+            "time" : "Appointment time",
+            "name" : "Full Name",
+            "address" : "Address",
+            "gender" : "Gender",
+            "action" : "Action",
+            "confirm" : "Confirm",
+            "remedy" : "Send Remedy"
+        }
+
+    },
+    
+    "detail-doctors": {
+        "schedule":{
+            "info-warning": "You do not have an appointment during this time, please choose another time",
+            "calendar":"Calendar",
+            "choose":"Choose",
+            "book-free":"and book (free)"
+        },
+        "extra-info-doctor": {
+            "add-text": "Clinic Address",
+            "price-text": "Price",
+            "detail-info": "See details",
+            "close-info": "Hide price list",
+            "pay-method": "The patient can pay the cost in the form of: "
+
+        },
+        "booking-modal": {
+            "title": "Information to book a medical appointment",
+            "name": "First and last name",
+            "phone": "Phone number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reasons for medical examination",
+            "birthday": "Date of birth",
+            "gender": "Gender",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "free-booking": "Free booking",
+            "price-booking": "Price of medical examination"
+        }
+    }
+}
